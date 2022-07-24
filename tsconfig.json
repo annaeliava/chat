@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-      "outDir": "./dist/",
+      "outDir": "dist",
       "noImplicitAny": true,
-      "target": "es5",
+      "target": "es6",
       "jsx": "react",
       "allowJs": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true
     }
-       
-  }
+}
