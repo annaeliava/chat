@@ -1,14 +1,16 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
 
 app.get('/', (req: any, res: any) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile((path.join(__dirname, '../client', '/index.html')));
 });
 
-app.use(express.static('../dist/'));
+
+app.use('/dist', express.static((path.join(__dirname, '..', 'dist'))));
 
 
 io.on('connection', (socket: any) => {
