@@ -12,6 +12,27 @@
 <body>
     <div class="flexbox">
         <div class="chat-box">
+            <form class="chat-form">
+                <div class="chat-form-avatar">
+                    <img src="/client/assets/icon/Avatar.png" width="120" height="100" />
+                    <div id="my-button">
+                        <input type="file" name="myfile" id="file-button">
+                        <img src="/client/assets/icon/Vector (1).png" width="20" height="20" />
+                    </div>
+                </div>
+                <div class="chat-form-input">
+                    <input type="text" placeholder="Имя" class="form-input">
+                    <input type="text" placeholder="Фамилия" class="form-input">
+                    <input type="text" placeholder="Дата рождения (Необязательно)" class="form-input">
+                    <input type="text" placeholder="Гендер (Необязательно)" class="form-input">
+                </div>
+                <button type="submit" class="chat-form-btn">Вступить в чат</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="flexbox">
+        <div class="chat-box">
             <header class="chat-box-header">
                 <div class="header-content">
                     <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg" width="30"
@@ -61,16 +82,22 @@
                 <div><span></span> <span></span> <span></span> <span class="n">Someone</span> is typing...</div>
             </div>
             <footer class="chat-box-footer">
-                <img src="/client/assets/icon/clip.png" />
+                <img src="/client/assets/icon/clip.png" class="chat-clip" />
                 <textarea id="chat_input" placeholder="Сообщение"> </textarea>
                 <button id="send">
                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                         <path fill="#AA55EE" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
                     </svg>
                 </button>
+                <div class="emojiBox" style="display: none">
+                    <div class="box">
+                    </div>
+                </div>
             </footer>
         </div>
     </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
 </body>
 
 </html>
