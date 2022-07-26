@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/client/assets/style/style.css">
+    <script src="http://46.182.31.65:8080/socket.io/socket.io.js"></script>
     <title>Document</title>
 </head>
 
@@ -18,7 +20,75 @@
             <button class="btn">Send</button>
         </form>
     </main>
+
+    <div class="flexbox">
+        <div class="chat-box">
+            <header class="chat-box-header">
+                <div class="header-content">
+                    <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg" width="30"
+                        height="30" /> Иван Иванов<br /><small>Был(а) в сети: 0 мин назад</small>
+                </div>
+                <img src="/client/assets/icon/icon-receiver.png" class="icon-receiver" />
+            </header>
+            <main id="chat_box_body" class="chat-box-body">
+                <div id="chat_messages">
+                    <div class="date">Суббота</div>
+                    <div class="profile other-profile">
+                        <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg"
+                            width="30" height="30" />
+                        <span>Имя Фамилия</span>
+                    </div>
+                    <div class="message other-message">
+                        Привет! Это тестовое сообщение
+                    </div>
+                    <div class="profile my-profile">
+                        <span>Имя фамилия</span>
+                        <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg"
+                            width="30" height="30" />
+                    </div>
+                    <div class="message my-message">
+                        Ого, привет! Это тестовый ответ на тестовое сообщение
+                    </div>
+                    <div class="date">Сегодня</div>
+                    <div class="profile other-profile">
+                        <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg"
+                            width="30" height="30" />
+                        <span>Имя Фамилия</span>
+                    </div>
+                    <div class="message other-message">
+                        Сорри, не заметил! На тесты можно не отвечать
+                    </div>
+                    <div class="profile my-profile">
+                        <span>Имя фамилия</span>
+                        <img src="https://i.pinimg.com/originals/14/0d/5d/140d5d5781c7293dbbcb41929df56260.jpg"
+                            width="30" height="30" />
+                    </div>
+                    <div class="message my-message">
+                        Хорошо! Больше не буду отвечать
+                    </div>
+                </div>
+            </main>
+            <div id="typing">
+                <div><span></span> <span></span> <span></span> <span class="n">Someone</span> is typing...</div>
+            </div>
+            <footer class="chat-box-footer">
+                <img src="/client/assets/icon/clip.png" class="chat-clip" />
+                <textarea id="chat_input" placeholder="Сообщение"> </textarea>
+                <button id="send">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#AA55EE" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                    </svg>
+                </button>
+                <div class="emojiBox" style="display: none">
+                    <div class="box">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
     <script src="../dist/index.js"></script>
+
+
 </body>
 
 </html>

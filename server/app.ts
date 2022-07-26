@@ -13,6 +13,7 @@ app.get('/', (req: any, res: any) => {
 app.use('/dist', express.static((path.join(__dirname, '..', 'dist'))));
 
 
+
 io.on('connection', (socket: any) => {
     socket.on('chat message', (data: any) => {
         io.emit('chat message', {
@@ -25,3 +26,4 @@ io.on('connection', (socket: any) => {
 http.listen(3000, () => {
     console.log("Start");
 });
+
