@@ -56,6 +56,10 @@ body {
   height: 30px;
   cursor: pointer;
 }
+.chat-box > .chat-box-header .icon-receiver:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
 .chat-box > .chat-box-body {
   height: 100%;
   display: flex;
@@ -159,10 +163,7 @@ body {
 }
 .chat-box > .chat-box-footer img {
   display: inline-block;
-  margin: 0;
-  padding-top: 5px;
-  padding-right: 3px;
-  vertical-align: middle;
+  padding: 15px 10px;
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -171,9 +172,9 @@ body {
   color: #2f2f2f;
   font-family: Raleway, sans-serif;
   font-size: 16px;
-  background-color: #e2e2e2;
-  width: 100%;
-  height: 40px;
+  background-color: #d2d2d2;
+  width: 80%;
+  height: 60px;
   max-height: 120px;
   border: none;
   padding: 10px 15px;
@@ -192,6 +193,10 @@ body {
   padding: 5px;
   cursor: pointer;
   border-radius: 50%;
+}
+.chat-box > .chat-box-footer > #send:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
 }
 
 @media (min-width: 480px) {
@@ -227,11 +232,6 @@ body {
     transform: translateY(0px);
   }
 }
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
 button {
   outline: none;
 }
@@ -247,8 +247,23 @@ h3 > small {
 }
 .chat-form > .chat-form-avatar {
   margin-top: 30%;
-  align-self: center;
+  margin-left: 150px;
   cursor: pointer;
+  display: flex;
+}
+.chat-form > .chat-form-avatar > #my-button {
+  align-self: end;
+  position: relative;
+  overflow: hidden;
+}
+.chat-form > .chat-form-avatar #file-button {
+  filter: alpha(opacity=1);
+  -moz-opacity: 0.01;
+  opacity: 0.01;
+  cursor: pointer;
+  font-size: 72px;
+  position: absolute;
+  right: 0;
 }
 .chat-form > .chat-form-input {
   display: grid;
@@ -273,4 +288,15 @@ h3 > small {
   cursor: pointer;
   margin-top: 27px;
   font-size: large;
+}
+
+/* EmojiBox */
+.emojiBox {
+  width: 150px;
+  margin: 30px;
+}
+
+.emojiBox .box {
+  height: 100px;
+  padding: 4px;
 }/*# sourceMappingURL=style.css.map */
