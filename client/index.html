@@ -5,20 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="indstyle.css">
     <title>Document</title>
 </head>
 
+
 <body>
-    <main>
-        <ul class="messages">
-        </ul>
-        <form class="form">
-            <div class="name"></div>
-            <input type="text" class="input" autocomplete="off">
-            <button class="btn">Send</button>
-        </form>
-    </main>
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <div class="form-avatar">
+                    <img src="Avatar.png" width="120" height="100" />
+                    <div id="my-button">
+                        <input type="file" name="myfile" id="file-button">
+                        <img src="Vector (1).png" width="20" height="20" />
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label>Имя пользователя</label>
+                    <input type="text" id="username" placeholder="Введите Ваше имя">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Присоединиться к чату</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">Чат комната
+                </div>
+                <button id="exit-chat"> Покинуть чат</button>
+            </div>
+            <div class="messages">
+            </div>
+            <div class="typebox">
+                <div id="my-clip">
+                    <input type="file" name="myfile" id="file">
+                    <img src="clip.png" class="chat-clip" width="25" height="25" />
+                </div>
+                <input type="text" id="message-input" placeholder="Сообщение">
+                <div class="emojiBox">
+                    <img src="smile.png" class="chat-emoji" width="22" height="22">
+                </div>
+                <button id="send-message"><svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                        <path fill="#AA55EE" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
     <script src="../dist/index.js"></script>
 </body>
 
