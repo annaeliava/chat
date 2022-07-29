@@ -11,3 +11,7 @@ const picker = createPopup({}, {
 picker.addEventListener('emoji:select', event => {
   console.log('Emoji selected:', event.emoji);
 });
+
+triggerButton.addEventListener('click', function() {
+  console.log('test');
+});

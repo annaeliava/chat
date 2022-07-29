@@ -22,17 +22,6 @@ var editor = new MediumEditor('.editable', {
 }); // to disable the toolbar
 
 var editor = new MediumEditor('.editable', {
-    placeholder: {
-        text: 'Type your text',
-        hideOnClick: true
-    }
-});
-
-var editor = new MediumEditor('.editable', {
-    placeholder: false
-});
-
-var editor = new MediumEditor('.editable', {
     keyboardCommands: {
         commands: [
             {
