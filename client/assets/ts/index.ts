@@ -3,3 +3,5 @@
 import './chatApp'
 import './client'
 import './emoji'
+//import './delete'
+import './text'

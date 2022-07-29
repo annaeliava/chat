@@ -1,10 +1,13 @@
-import { createPopup } from 'picmo';
+import { createPopup } from '@picmo/popup-picker';
 
-const trigger = document.querySelector('.chat-emoji');
+const triggerButton = document.querySelector('.emojiBox');
 
-const picker = createPopup({
-  // picker options go here
-}, {
-    referenceElement: trigger,
-    triggerElement: trigger
+const picker = createPopup({}, {
+    referenceElement: triggerButton,
+    triggerElement: triggerButton,
+    position: 'top-start'
+});
+
+picker.addEventListener('emoji:select', event => {
+  console.log('Emoji selected:', event.emoji);
 });
