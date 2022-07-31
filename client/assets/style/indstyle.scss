@@ -249,7 +249,11 @@ padding: 0px 20px;
     cursor: pointer;
 }
 
-.pickerContainer {
+.pickerContainer{
+    display: none;
+    position: absolute;
+    top: 105px;
+    right: 10px;
 }
 
 
