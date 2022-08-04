@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/yargs": "^17.0.10",
+    "moment-locales-webpack-plugin": "^1.2.0",
     "svg-inline-loader": "^0.8.2",
     "ts-loader": "^9.3.1",
     "ts-node": "10.9.1",
@@ -20,7 +21,15 @@
     "webpack-cli": "4.10.0"
   },
   "dependencies": {
+    "@cometchat-pro/chat": "^3.0.10",
+    "@picmo/popup-picker": "^5.3.0",
+    "crypto-browserify": "^3.12.0",
+    "emojionearea": "^3.0.0",
     "express": "^4.18.1",
+    "medium-editor": "^5.23.3",
+    "moment": "^2.29.4",
+    "picmo": "^5.3.0",
+    "rm-emoji-picker": "^1.0.0",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
     "yargs": "^17.5.1"
