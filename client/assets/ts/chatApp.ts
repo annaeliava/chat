@@ -1,3 +1,4 @@
+import moment from "moment";
 import { io, Socket } from "socket.io-client";
 
 (function () {
@@ -49,25 +50,30 @@ import { io, Socket } from "socket.io-client";
     function renderMessage(type: any, message: any) {
         let messageContainer = app.querySelector(".chat-screen .messages");
         if (type == "my") {
+            const moment = require('moment');
+            let now = moment().format('LLL');
             let el = document.createElement("div");
             el.setAttribute("class", "message my-message");
             el.innerHTML =
                 `<div class="textmy">
                     <div class="name">Вы</div>
                     <div class="text">${message.text}</div>
-                    <div class="date">Дата</div>
+                    <div class="date">${now}</div>
                     <button class='deleteButton' id='dltBtn' style='outline:none; cursor:pointer; border: none; background-color: transparent; color: #555; font-size: 12px; margin-top: 6px;'>Удалить</button>
+
                 </div>`;
             messageContainer.appendChild(el);
 
         } else if (type == "other") {
+            const moment = require('moment');
+            let now = moment().format('LLL');
             let el = document.createElement("div");
             el.setAttribute("class", "message other-message");
             el.innerHTML =
                 `<div class="textother">
                     <div class="name">${message.username}</div>
                     <div class="text">${message.text}</div>
-                    <div class="date">Дата</div>
+                    <div class="date">${now}</div>
                 </div>`;
             messageContainer.appendChild(el);
 
