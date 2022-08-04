@@ -59,6 +59,8 @@ import { io, Socket } from "socket.io-client";
                     <div class="name">Вы</div>
                     <div class="text">${message.text}</div>
                     <div class="date">${now}</div>
+                    <button class='deleteButton' id='dltBtn' style='outline:none; cursor:pointer; border: none; background-color: transparent; color: #555; font-size: 12px; margin-top: 6px;'>Удалить</button>
+
                 </div>`;
             messageContainer.appendChild(el);
 
