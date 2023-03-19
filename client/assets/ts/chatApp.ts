@@ -59,8 +59,14 @@ import { io, Socket } from "socket.io-client";
                     <div class="name">Вы</div>
                     <div class="text">${message.text}</div>
                     <div class="date">${now}</div>
-                    <button class='deleteButton' id='dltBtn' style='outline:none; cursor:pointer; border: none; background-color: transparent; color: #555; font-size: 12px; margin-top: 6px;'>Удалить</button>
-
+                    <button 
+                        class="deleteButton" 
+                        id="dltBtn"
+                        style="outline:none; cursor:pointer; border: none; background-color: transparent; color: #555; font-size: 12px; margin-top: 6px;"
+                        onclick="(function(){
+                            let element = document.getElementsByClassName('textmy');
+                            element[0].parentNode.removeChild(element[0]);
+                        })();">Удалить</button>
                 </div>`;
             messageContainer.appendChild(el);
 
@@ -87,5 +93,3 @@ import { io, Socket } from "socket.io-client";
         messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
     }
 })();
-
-console.log('testee');

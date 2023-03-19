@@ -12,7 +12,6 @@ const picker = createPicker({
 }); //creating Emoji Picker
 
 picker.addEventListener('emoji:select', event => {
-  console.log(event.emoji);
   message.value += event.emoji;
 }); //adding emoji
 
@@ -29,15 +28,5 @@ btn.onclick = function(){
     p.style.display = "none";
   }
 }; //picker's visibility
-
-//delete a message
-
-/*const unwantedMessage = document.getElementsByClassName('textmy'); 
-const deleteBtn = document.getElementById('dltBtn');
-
-deleteBtn.onclick = function(){
-  console.log('hi');
-  unwantedMessage.remove();
-};*/
 
 

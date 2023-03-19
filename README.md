@@ -1,11 +1,17 @@
 # chat
 
+# Getting started
+
 Сервер запускается командой npm run start-server в терминале.
 Проект открывается в браузере по адресу http://localhost:3000
 
-1. npm init
-2. npm run build
-3. npm run start-server
+`npm install`
+
+`npm run build`
+
+`npm run start-server`
+
+# Technologies
 
 <div>
     <img title='html5' alt='html5' width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />&nbsp;
